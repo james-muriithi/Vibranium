@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="//localhost:35729/livereload.js?snipver=1" async="" defer=""></script>
 <html lang="en">
 
 <head>
@@ -268,14 +269,14 @@
                 <div class="tab-pane active" id="upcoming" role="tabpanel" aria-labelledby="upcoming">
                     <div class="row justify-content-center">
                         <div class="col-md-4 col-12">
-                            <div class="card event-card wow fadeInUp"><img class="card-img-top" data-src="dist/images/assets/events/infoSession.png" alt="Event one poster">
+                            <div class="card event-card wow fadeInUp"><img class="card-img-top" data-src="dist/images/assets/events/kotlin.jpg" alt="Event one poster">
                                 <div class="card-body">
-                                    <p class="tagging intermediate float-right">Info Session</p>
-                                    <h5 class="card-title">Info Session</h5>
+                                    <p class="tagging intermediate float-right">Kotlin</p>
+                                    <h5 class="card-title">Inroduction to Kotlin</h5>
                                     <table>
                                         <tr>
                                             <td width="15%" class="text-blue"><i class="far fa-calendar-alt"></i></td>
-                                            <td>26<sup>th</sup> Sept 2019</td>
+                                            <td>5<sup>th</sup> Oct 2019</td>
                                         </tr>
                                         <tr>
                                             <td class="text-red"><i class="fas fa-map-marker-alt"></i></td>
@@ -283,9 +284,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-green"><i class="far fa-clock"></i></td>
-                                            <td>1600hrs - 1800hrs</td>
+                                            <td>1400hrs - 1700hrs</td>
                                         </tr>
-                                    </table><a href="https://bit.ly/DSCPUForm" target="_blank" class="button float-right">Attend</a></div>
+                                    </table><a href="https://bit.ly/DSCPUAndroid" target="_blank" class="button float-right">Attend</a></div>
                             </div>
                         </div>
                     </div>
@@ -297,7 +298,8 @@
                             <div class="row align-items-center wow fadeInUp">
                                 <div class="col-sm-6">
                                     <div class="feature-list-image">
-                                        <iframe data-urllink="https://docs.google.com/presentation/d/1HA5ts2tHSd3AHRQ1Z2BM8ibWjmlqLaFXw3VupKZzhgM/edit?usp=sharing" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                                        <iframe data-urllink="https://bit.ly/DSCPUInfoSessionSlides" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                    </div>
                                 </div>
                                 <div class="col-sm-5 ml-auto">
                                     <div class="feature-list-wrapper">
@@ -306,7 +308,8 @@
                                             <hr>
                                             <h6>DATE : 26<sup>th</sup> Sept 2019</h6>
                                             <h6>VENUE : Computer Science</h6>
-                                            <p>We learnt how to assemble an Android Things kit and saw the temperature and barometer sensors on the kit in action</p>
+                                            <p>Members we informed on What Developer Student CLubs is all about, the impacts to oneself and the community and success stories from different parts of the world. Members were also informed on google technologies
+                                                like, Android, Web, Google Cloud Platform, Machine Learning and Artificial Intelligence, Firebase and Action on Google</p>
                                         </div><a href="https://photos.app.goo.gl/an1bWouatHVZSqmu8" class="past-event" target="_blank" rel="noopener">EVENT PHOTOS&nbsp;&nbsp;<i class="fas fa-camera"></i></a></div>
                                 </div>
                             </div>
@@ -323,7 +326,7 @@
                 <p class="section-subtitle wow fadeInUp">Passionate students and faculty staff driving the success of the program.</p>
             </header>
             <div class="container-fluid">
-                <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="false">
+                <div id="carouselExample" class="carouselPrograms carousel slide" data-ride="carousel" data-interval="5000">
                     <div class="carousel-inner row w-100 mx-auto" role="listbox">
                         <div class="carousel-item col-md-4 col-15 active">
                             <div class="card event-card">
@@ -352,7 +355,7 @@
                             <div class="card event-card">
                                 <div class="card hovercard">
                                     <div class="cardheader"></div>
-                                    <div class="avatar"><img data-src="dist/images/assets/team/grace.jpg" alt="lead avatar"></div>
+                                    <div class="avatar"><img data-src="dist/images/assets/team/grace.png" alt="lead avatar"></div>
                                     <div class="info">
                                         <div class="title">
                                             <h5>Grace Mwende</h5>
@@ -648,3 +651,24 @@
 </body>
 
 </html>
+<script>
+    $(document).ready(() => {
+        let hash = window.location.hash;
+        if (hash) {
+            let element = $(hash);
+            if (element) {
+                scrollTo(element);
+            }
+        }
+    });
+    let scrollTo = (target) => {
+        let navbar = $('.navbar');
+        let navbarHeight = navbar.outerHeight();
+
+        if (target) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - navbarHeight + 50
+            }, 1200);
+        }
+    }
+</script>
